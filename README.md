@@ -9,30 +9,31 @@
     <TabControl>
         <TabItem Header="4x4">
             <UniformGrid>
-                <UniformGrid >
+                <UniformGrid>
                     <Button Click="Button_Click"></Button>
                     <Button Click="Button_Click_1"></Button>
                     <Button Click="Button_Click_2"></Button>
                     <Button Click="Button_Click_3"></Button>
                 </UniformGrid>
-                <UniformGrid >
+                <UniformGrid>
                     <Button Click="Button_Click_4"></Button>
                     <Button Click="Button_Click_5"></Button>
                     <Button Click="Button_Click_6"></Button>
                     <Button Click="Button_Click_7"></Button>
                 </UniformGrid>
-                <UniformGrid >
+                <UniformGrid>
                     <Button Click="Button_Click_8"></Button>
                     <Button Click="Button_Click_9"></Button>
                     <Button Click="Button_Click_10"></Button>
                     <Button Click="Button_Click_11"></Button>
                 </UniformGrid>
-                <UniformGrid >
+                <UniformGrid>
                     <Button Click="Button_Click_12"></Button>
                     <Button Click="Button_Click_13"></Button>
                     <Button Click="Button_Click_14"></Button>
                     <Button Click="Button_Click_15"></Button>
                 </UniformGrid>
+                <Button Content="Sprawdź" Click="CheckButton_Click"></Button>
             </UniformGrid>
         </TabItem>
     </TabControl>
@@ -284,7 +285,53 @@ namespace sudoku
 
                 if (ile == 4)
                 {
-                    ile = 1;
+                    ile =(Button)sender;
+
+{
+
+ile = 1;
+
+}
+
+else
+
+{
+
+ile++;
+
+}
+
+button.Content = ile.ToString();
+
+}
+
+}
+
+
+private void Button_Click_9(object sender, RoutedEventArgs e)
+
+{
+
+Button button = (Button)sender;
+
+if (button.Content == null)
+
+{
+
+button.Content = "1";
+
+}
+
+else
+
+{
+
+int ile = Int32.Parse(button.Content.ToString());
+
+
+if (ile
+
+ 1;
                 }
                 else
                 {
